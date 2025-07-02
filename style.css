@@ -1,0 +1,56 @@
+body {
+  margin: 100px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.conko {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.conko label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.conko input[type="text"],
+.conko input[type="age"],
+.conko input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background-color: #f1f5f9;
+}
+
+
+.conko button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.gender-options{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
