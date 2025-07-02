@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate username
     if (empty($username)) {
         $nameError = "<h2 style='color:red'>Name field is empty</h2>";
-    } elseif (!preg_match('/[a-zA-Z]/', $username)) {
-        $nameError = "<h2 style='color:blue'>Name is not valid</h2>";
+    } elseif (!preg_match('/^[a-zA-Z]+$/', $username)) {
+        $nameError = "<h2 style='color:blue'>Name must contain only alphabets</h2>";
     } 
     // else {
     //     $approvedMessages["username"] = "<h2 style='color:green'>Hello {$username}</h2>";
