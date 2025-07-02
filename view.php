@@ -41,7 +41,7 @@ $students = $db->getStudentData();
                 <td><?php echo $student["gender"]?> </td>
                 <td><?php echo $student["program"]?> </td> 
                 <td>
-                    <a href="">view</a>
+                    <a href="view.php id=<?php echo $student['id']; ?>">view</a>
                 </td>                 
             </tr>
             <?php endforeach; ?>

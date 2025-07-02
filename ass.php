@@ -71,8 +71,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $db = new Database($hostname, $dbUser, $password, $db_name);
     
-    $db->savedata($username, $age, $gender, $email, $program);
-    $approvedMessages["success"] = "<h2 style='color:green'>Registration successful</h2>";
+    if (empty($nameError) && empty($emailError) && empty($ageError) && empty($genderError) && empty($programError)) {
+        $db->savedata($username, $age, $gender, $email, $program);
+        $approvedMessages["success"] = "<h2 style='color:green'>Registration successful</h2>";
+    }
 }
 
 
