@@ -114,6 +114,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="conko">
         <!-- <?php echo $approvedMessages["success"] ; ?> -->
+        <div>
+            <?php 
+                if (isset($approvedMessages["success"])) {
+                    echo $approvedMessages["success"];
+                }
+            ?>
+        </div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" novalidate>
             <label for="name">Name</label>
             <input type="text" name="username" placeholder="Enter your name" value="<?php echo htmlspecialchars($username); ?>" />
@@ -154,13 +161,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit">Register</button>
             <a href="view.php">Get all students</a>
         </form>
-        <div>
-            <?php 
-                foreach ($approvedMessages as $message) {
-                    echo $message;
-                }
-            ?>
-        </div>
+        <!-- Removed duplicate success message display to show only at the top -->
     </div>
 </body>
 </html>
